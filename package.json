@@ -1,0 +1,33 @@
+{
+    "name": "astatine",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "rebuild": "docker compose build --no-cache && docker compose up -d --remove-orphans",
+        "restart": "docker compose restart app"
+    },
+    "private": true,
+    "devDependencies": {
+        "prettier": "3.7.3"
+    },
+    "type": "module",
+    "imports": {
+        "#utils/*": [
+            "./src/utils/*.js"
+        ],
+        "#constants/*": [
+            "./src/constants/*.js"
+        ],
+        "#routes/*": [
+            "./src/routes/*.js"
+        ],
+        "#models/*": [
+            "./src/models/*.js"
+        ],
+        "#services/*": [
+            "./src/services/*.js"
+        ]
+    }
+}
