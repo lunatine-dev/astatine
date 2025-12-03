@@ -6,8 +6,6 @@ services:
       dockerfile: Dockerfile
     environment:
       - NODE_ENV=production
-    ports:
-      - "127.0.0.1:${PORT}:${PORT}"
     volumes:
       - .env:/app/.env:ro
     restart: unless-stopped
