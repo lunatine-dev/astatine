@@ -8,7 +8,7 @@ const client = new Client({
 });
 
 client.once(Events.ClientReady, (client) => {
-    console.log(`Ready as ${client.user.tag}`);
+    console.log(`Ready as ${client.user.tag}!`);
 });
 
 client.login(process.env.DISCORD_TOKEN);
